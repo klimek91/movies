@@ -1,4 +1,4 @@
-<div *ngFor = "let movie of movies;">
+<div *ngFor = "let movie of movies;" routerLink="film/{{movie.id}}">
     <img src="./assets/{{movie.title | lowercase }}.jpg" width="150px"/>
 
 </div>
