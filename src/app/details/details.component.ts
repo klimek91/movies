@@ -8,14 +8,18 @@ import {ActivatedRoute} from '@angular/router';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit {
+
+  movie;
   
   
 
-  constructor( private route:ActivatedRoute) { }
+  constructor( private route:ActivatedRoute,
+    private fS:FilmyService ) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
-    console.log('id',id);
+    
+    this.movie = this.fS.getFilm(Number(id));
     
 
   }

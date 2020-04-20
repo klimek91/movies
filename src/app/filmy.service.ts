@@ -17,4 +17,8 @@ export class FilmyService {
   wszystkieFilmy() {
     return this.filmyService;
   }
+
+  getFilm(id){
+    return this.filmyService[id];
+  }
 }

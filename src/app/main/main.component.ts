@@ -7,7 +7,7 @@ import { FilmyService } from '../filmy.service';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-  movies=[]
+  movies=[];
 
   constructor(private fS:FilmyService) { }
 
