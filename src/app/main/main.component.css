@@ -1,0 +1,10 @@
+.poster {
+    float: left;
+    padding: 8px;
+    margin: 15px;
+    border: 1px solid var(--main-color);
+}
+
+h3{
+    margin: 20px;
+}
