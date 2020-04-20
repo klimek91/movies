@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import { DetailsComponent } from './details/details.component';
 
+import {FilmyService} from './filmy.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,7 @@ import { DetailsComponent } from './details/details.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [FilmyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
