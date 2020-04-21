@@ -6,3 +6,9 @@ img {
 h2 {
     font-weight: bolder;
 }
+
+button {
+    cursor: pointer;
+    padding: 5px 15px;
+    margin: 10px;
+}
