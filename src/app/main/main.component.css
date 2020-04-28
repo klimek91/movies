@@ -3,6 +3,7 @@
     padding: 8px;
     margin: 15px;
     border: 1px solid var(--main-color);
+    cursor: pointer;
 }
 
 h3{

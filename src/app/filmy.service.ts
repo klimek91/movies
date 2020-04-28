@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 
 @Injectable({
@@ -6,16 +8,12 @@ import { Injectable } from '@angular/core';
 })
 export class FilmyService {
 
-  private filmyService = [
-    {id:0, title:"Titanic", rok: 1997, opis: "Rok 1912, brytyjski statek Titanic wyrusza w swój dziewiczy rejs do USA. Na pokładzie emigrant Jack przypadkowo spotyka arystokratkę Rose."},
-    {id:1, title:"Terminator", rok: 1984, opis: "Elektroniczny morderca zostaje wysłany z przyszłości do roku 1984, by zabić matkę przyszłego lidera rewolucji. W ślad za nim rusza Kyle Reese, który ma chronić kobietę."},
-    {id:2, title:"Avatar", rok:2009, opis:"Jake, sparaliżowany były komandos, zostaje wysłany na planetę Pandora, gdzie zaprzyjaźnia się z lokalną społecznością i postanawia jej pomóc."},
-  ]
+  private filmyService = []
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  wszystkieFilmy() {
-    return this.filmyService;
+  wszystkieFilmy(): Observable<any> {
+    return this.http.get('http://127.0.0.1:8000/api/filmy/') ;
   }
 
   getFilm(id){

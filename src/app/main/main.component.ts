@@ -12,7 +12,14 @@ export class MainComponent implements OnInit {
   constructor(private fS:FilmyService) { }
 
   ngOnInit(): void {
-    this.movies = this.fS.wszystkieFilmy();
+    this.fS.wszystkieFilmy().subscribe(
+      (dane) => {
+        this.movies = dane;
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
 
 }
