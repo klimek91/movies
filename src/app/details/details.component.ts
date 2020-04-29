@@ -3,6 +3,7 @@ import {FilmyService} from '../filmy.service';
 import {ActivatedRoute} from '@angular/router';
 import {Location} from '@angular/common';
 import { Subscriber } from 'rxjs';
+import {environment} from '../../environments/environment';
 
 @Component({
   selector: 'app-details',
@@ -12,7 +13,7 @@ import { Subscriber } from 'rxjs';
 export class DetailsComponent implements OnInit {
 
   movie;
-  baseUrl: String = 'http://127.0.0.1:8000'
+  baseUrl: String = environment.apiURL;
   
 
   constructor( private route:ActivatedRoute,
