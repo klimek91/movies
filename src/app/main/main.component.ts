@@ -8,6 +8,7 @@ import { FilmyService } from '../filmy.service';
 })
 export class MainComponent implements OnInit {
   movies=[];
+  wiadomosc: String = "";
 
   constructor(private fS:FilmyService) { }
 
@@ -17,6 +18,7 @@ export class MainComponent implements OnInit {
         this.movies = dane;
       },
       (error) => {
+        this.wiadomosc = "Django offline. Wystapil blad. Sprobuj pozniej. "
         console.log(error);
       }
     );

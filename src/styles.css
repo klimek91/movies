@@ -1,9 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 
 body {
-    --main-color: rgb(236, 187, 61);
+    --main-color: rgb(226, 226, 226);
     color: var(--main-color);
-    background-color: rgba(119, 60, 33, 0.829);
+    background-color: rgba(33, 73, 119, 0.829);
     margin-left: 100px;
 
 }
